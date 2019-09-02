@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>select account type</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Monofett|Notable|Plaster&display=swap" rel="stylesheet"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+     .bg{
+      background-image: url(proimg/wallpay.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: auto;
+     
+     }
+     .ss{
+          width: 120px;
+          height: 60px;
+         
+      }
+      .btn {
+        border: 2px solid white;
+        border-radius: 18px;
+        width: 100px;
+
+      }
+      .sign_page{
+        border: 1px solid blue;
+        width: 80%;
+        height: 100px;
+      }
+      .option1_heading{
+        font-size: 1.5rem;
+        list-style: none;
+        color: #003087;
+      }
+      .option2_heading{
+        font-size: 1.5rem;
+        list-style: none;
+        color: #DE0063;
+      }
+      .Personal_Account li{
+        text-align: initial;
+      }
+      .tt{
+         width: 50%;
+      }
+      .card{
+        border-radius: 1.25rem;
+        
+      }
+      /* css for custom radio button */
+        .radiocontainer{
+          display: inline-block;
+          position: relative;
+          cursor: pointer;
+          font-size: 1.5rem;
+          user-select: none;
+          padding-left: 30px;
+        }
+        .radiocontainer input{
+          display: none;
+        }
+        .radiocontainer .circle{
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          background-color:white;
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 50%;
+          border: 2px solid #003087;
+          margin-top: 7px;
+        }
+        .radiocontainer:hover .circle{
+        background-color: #ccc;
+        }
+        .radiocontainer input:checked + .circle{
+          background-color:white;
+        }
+        .radiocontainer input:checked + .circle:after{
+          content: "";
+          height: 15px;
+          width: 15px;
+          background-color: #003087;
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+
+        }
+        /* sec radio  */
+        .radiocontainer2{
+          display: inline-block;
+          position: relative;
+          cursor: pointer;
+          font-size: 1.5rem;
+          user-select: none;
+          padding-left: 30px;
+        }
+        .radiocontainer2 input{
+          display: none;
+        }
+        .radiocontainer2 .circle{
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          background-color:white;
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 50%;
+          border: 2px solid #DE0063;
+          margin-top: 7px;
+        }
+        .radiocontainer2:hover .circle{
+        background-color: #ccc;
+        }
+        .radiocontainer2 input:checked + .circle{
+          background-color:white;
+        }
+        .radiocontainer2 input:checked + .circle:after{
+          content: "";
+          height: 15px;
+          width: 15px;
+          background-color: #DE0063;
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+
+        }
+        /* radio end */
+      @media (max-width:800px){
+        .tt{
+         width: 100%;
+      }
+           .navbar{
+             display: none;
+           }
+          }
+  </style>
+</head>
+
+<body>
+  
+<div class="container-fluid bg ">
+
+  <nav class="navbar navbar-expand-sm navbar-dark ">
+    <!-- Brand/logo -->
+    <a class="navbar-brand " href="#"><h2
+      class="logopos"
+      style="font-family: 'Plaster', cursive;
+             font-family: 'Monofett', cursive;
+             font-family: 'Notable', sans-serif;
+             color: white;
+             "
+      >PAY BY <span style="color: #F80000;">U</span></h2>
+      <p class="logopos" style="font-size: 15px; letter-spacing:4px; ">Any Time,Every Time</p>
+    </a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="paybyu.html"><button type="button" class="btn btn-light">
+          
+          <img src="proimg/left-arrow.png" alt="#" style="width: 25px; height:25px;">
+
+          <img src="proimg/home.png" alt="paybyu.html" style="width: 25px; height:25px;">
+        
+        </button></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container-fluid tt">
+    <div class="container" style="width: 100%; height:40px;"></div>
+          <div class="card-deck">
+              <div class="card">
+                <div class="card-body text-center">
+                    <form name="myform" target="_blank" action="" onsubmit="return OnSubmitForm();">
+                        <fieldset>
+                    <h2>Join Pay-by-u today for free.</h2>
+                     <p style="color: gray; font-size: 15px;">Get started by choosing your account type below</p>
+                     <ul class="Personal_Account">
+                        <li class="option1_heading">
+                          <label class="radiocontainer">Personal Account
+                                <input type="radio" name="operation" value="1" >
+                                <span class="circle"></span>
+                            </label>
+                        </li>
+                        <li>Pay for your shopping locally and overseas</li>
+                        <li>Get 50% cashback on your first local purchase</li>
+                        <li>Get covered 24/7 from online and card fraud</li>
+                      </ul>
+                  <!--  -->
+                      <hr style="border: 1px solid grey; width: 90%;">
+                      <!--  -->
+                  <ul class="Personal_Account">
+                     <li class="option2_heading ">
+                        <label class="radiocontainer2">Business Account
+                            <input type="radio" name="operation" value="2">
+                            <span class="circle"></span>
+                          </label>
+                     </li>
+                     <li>Start accepting payments locally and overseas</li>
+                     <li>Suitable for sellers, freelancers and businesses</li>
+                     <li>Requires KYC to start receiving local INR payments</li>
+                   </ul>
+                                   <!--  -->
+                                   <br>
+                                  
+                      <input type="submit" name="submit" value="Next" class="btn btn-primary">          
+                  
+                  </fieldset>
+                </form>
+                </div>
+              </div>
+      
+</div>
+<div class="container" style="width: 100%; height:40px;"></div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+                  <!-- js for any one select form type-->
+                  
+<script type="text/javascript">
+
+  function OnSubmitForm()
+  
+  {
+  
+  if(document.myform.operation[0].checked == true)
+  
+  {
+  
+  document.myform.action ="personal_account.html";
+  
+  }
+  
+  else
+  
+  if(document.myform.operation[1].checked == true)
+  
+  {
+  
+  document.myform.action ="business_account.html";
+  
+  }
+  
+  return true;
+  
+  }
+  
+  </script>
